@@ -1,0 +1,57 @@
+import random
+
+# List of exercises for different health issues
+exercises = {
+    'Back Pain Prevention': [
+        'Cat-Cow Stretch',
+        'Child\'s Pose',
+        'Seated Spinal Twist',
+        'Bridge Exercise',
+        'Cobra Stretch'
+    ],
+    'Wrist Strain Prevention': [
+        'Wrist Flexor Stretch',
+        'Wrist Extensor Stretch',
+        'Thumb Stretch',
+        'Fist Clench',
+        'Prayer Stretch'
+    ],
+    'Eye Strain Prevention': [
+        '20-20-20 Rule: Look at something 20 feet away for 20 seconds every 20 minutes',
+        'Eye Rolling Exercise',
+        'Focus Change Exercise',
+        'Palming',
+        'Figure Eight Exercise'
+    ],
+    'Neck Pain Prevention': [
+        'Neck Tilt',
+        'Neck Turn',
+        'Shoulder Shrugs',
+        'Chin Tucks',
+        'Upper Trapezius Stretch'
+    ],
+    'Overall Mobility': [
+        'Standing Hamstring Stretch',
+        'Hip Flexor Stretch',
+        'Calf Stretch',
+        'Torso Twist',
+        'Ankle Circles'
+    ]
+}
+
+def get_random_exercise():
+    category = random.choice(list(exercises.keys()))
+    exercise = random.choice(exercises[category])
+    return category, exercise
+
+# Example usage
+category, exercise = get_random_exercise()
+print(f"Category: {category}")
+print(f"Exercise: {exercise}")
+
+# Run multiple times to get a few exercises
+for _ in range(3):
+    category, exercise = get_random_exercise()
+    print(f"Category: {category}")
+    print(f"Exercise: {exercise}")
+    print()
